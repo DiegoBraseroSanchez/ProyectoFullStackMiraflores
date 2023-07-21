@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>CRUD</title>
+  </head>
+  <body>
+      <!-- El código que proporcionó es un formulario HTML para crear un nuevo registro de usuario. -->
+      <div class="container mt-4">
+        <div class="card border-secondary">
+            <div class="card-header">Nuevo registro</div>
+            <div class="card-body">
+                 <!-- especifica la acción y el método para el formulario. -->
+                <form action="/save" method="POST">
+                    <!-- El código que proporcionó es un elemento Email de formulario en HTML. -->
+                    <div class="mb-3">
+                        <label for="user_email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="user_email" name="user_email" tabindex="1">
+                    </div>
+                   <!-- El código que proporcionó está creando un campo de entrada de formulario para la contraseña del usuario. -->
+                    <div class="mb-3">
+                        <label for="user_password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="user_password" name="user_password" tabindex="2">
+                    </div>
+                    <!-- El código que proporcionó está creando dos botones dentro del formulario. -->
+                    <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
+                    <a href="/admi" class="btn btn-secondary">Cancelar</a>
+                </form>
+            </div>
+        </div>
+      </div>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>

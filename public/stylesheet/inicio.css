@@ -1,0 +1,755 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* El código CSS `cuerpo { altura: 100vh; imagen de fondo: url(../images/32128.jpg); posición de fondo:
+centro; fondo-repetir: repetir; tamaño de fondo: portada; }` está diseñando el elemento `body`. */
+body {
+   height: 100vh;
+   background-image: url(../images/32128.jpg);
+   background-position: center;
+   background-repeat: repeat;
+   background-size: cover;
+}
+/* El código CSS `.Header` define los estilos para un elemento de encabezado. Establece el color de
+fondo en gris, muestra el elemento como un contenedor flexible, agrega un relleno superior de 1 rem
+y centra el contenido horizontalmente usando `justify-content: center`. */
+.Header{
+    background-color:grey;
+    display: flex;
+    padding-top: 1rem;
+    justify-content: center;
+}
+/* El código anterior define los estilos CSS para un elemento contenedor de encabezado. */
+.Header-wrapper{
+  width: 100%;
+  max-width: 1200px;
+  /* background-color: orange; */
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4rem;
+  padding-top: 1.4rem;
+}
+
+/* El código anterior define una clase CSS llamada "Header-img" y establece el ancho de los elementos
+con esta clase al 25% de la altura de la ventana gráfica. */
+.Header-img{
+  width: 25vh; 
+}
+.Main{
+  /*background-color: brown;*/
+}
+/* El código anterior define una clase CSS llamada "Main-img". Establece el ancho del elemento al 100%
+de su contenedor principal, la altura al 0% y usa la propiedad "object-fit" para especificar cómo se
+debe cambiar el tamaño de la imagen para que se ajuste a su contenedor. La propiedad "posición del
+objeto" se utiliza para especificar la posición de la imagen dentro de su contenedor. */
+.Main-img{
+  width: 100%;
+    height: 0%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* El código anterior define una clase CSS llamada "biografia-h1". Esta clase se usa para diseñar un
+elemento de encabezado (h1) en una sección de biografía. */
+.biografia-h1{
+  font-size: 5vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  text-transform: uppercase;
+}
+/* El código anterior es una consulta de medios CSS que apunta a dispositivos con un ancho máximo de
+775 píxeles. Aplica un estilo a los elementos con la clase "biografía-h1" estableciendo el tamaño de
+fuente en 3vh (altura de la ventana gráfica). */
+@media (max-width:775px){
+  .biografia-h1{
+      font-size: 3vh;
+  }
+/* El código anterior define una clase CSS llamada "biografia-h3" y establece el tamaño de fuente en
+2vh. */
+  .biografia-h3{
+    font-size: 2vh;
+  }
+}
+/* El código anterior es una consulta de medios CSS que apunta a dispositivos con un ancho máximo de
+525 píxeles. Aplica estilos específicos a elementos con la clase "biografia-h1" y "biografia-h3"
+cuando el ancho del dispositivo está dentro del rango especificado. En este caso, reduce el tamaño
+de fuente del elemento "biografia-h1" a 2vh (altura de la ventana gráfica) y el tamaño de fuente del
+elemento "biografia-h3" a 1vh. */
+@media (max-width:525px){
+  .biografia-h1{
+      font-size: 2vh;
+  }
+  .biografia-h3{
+    font-size: 1vh;
+  }
+}
+/* El código anterior define una clase CSS llamada "biografia-h3". Esta clase se usa para diseñar un
+elemento de encabezado HTML (h3) que se usa para una sección de biografía. */
+.biografia-h3{
+  width: 60%;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 2.2vh;
+}
+/* El código anterior define una clase CSS llamada "biografia-p". Esta clase se aplica a un elemento
+HTML y el código especifica varias propiedades de estilo para ese elemento. */
+.biografia-p{
+  width: 60%;
+  color: white;
+  padding-top: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 2vh;
+  padding-bottom: 2rem;
+}
+/* El código anterior define una consulta de medios en CSS. Apunta a pantallas con un ancho máximo de
+650 píxeles. Dentro de la consulta de medios, establece el ancho de los elementos con la clase
+"biografia-p" y "biografia-h3" al 90%. Esto significa que cuando el ancho de la pantalla sea menor o
+igual a 650 píxeles, los elementos con estas clases tendrán un ancho del 90% de su contenedor padre. */
+@media(max-width:650px){
+  .biografia-p{
+      width: 90%;
+  }
+  .biografia-h3{
+    width: 90%;
+  }
+}
+/* El código anterior define una clase CSS llamada "Slider". Establece el ancho del elemento al 90 % de
+su contenedor principal, con un ancho máximo de 900 px y una altura máxima de 500 px. El color de
+fondo se establece en gris claro. El elemento se centra horizontalmente usando la propiedad "margin:
+auto". Se posiciona en relación a su posición normal usando "posición: relativa". El radio del borde
+se establece en 2 rem, dándole esquinas redondeadas. Finalmente, la propiedad "overflow: hidden" se
+usa para ocultar cualquier contenido que exceda las dimensiones del elemento. */
+.Slider{
+  width: 90%;
+  max-width: 900px;
+  max-height: 500px;
+  background-color: lightgrey;
+  margin:  auto;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+/* El código anterior define una clase CSS llamada "Contenedor deslizante". Establece el color de fondo
+de los elementos con esta clase en aguamarina y los coloca en relación con su posición normal. */
+.Slider-container{
+  background-color: aquamarine;
+  position: relative;
+}
+/* El código anterior define una clase CSS llamada "Slider-img". Esta clase se usa para diseñar un
+elemento que se usará en un control deslizante. El color de fondo se establece en naranja y la
+altura mínima se establece en 10 rem. El elemento se coloca absolutamente en la esquina superior
+izquierda de su contenedor. La opacidad se establece en 0, lo que hace que el elemento sea
+inicialmente invisible. Se aplica un efecto de transición a la propiedad de opacidad, que hará que
+el elemento aparezca o desaparezca progresivamente durante 0,5 segundos con una función de
+temporización suave. */
+.Slider-img{
+  width: 100%;
+  background: orange;
+  min-height: 12rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s ease;
+  object-fit: fill;
+  
+}
+/* El código anterior define una clase CSS llamada "Slider-img.isActive" y establece la propiedad de
+opacidad en 1. Es probable que esta clase se use para diseñar un elemento de imagen en un control
+deslizante o componente de carrusel, haciéndolo visible o activo. */
+.Slider-img.isActive{
+  opacity: 1;
+}
+/* El código anterior apunta al primer elemento secundario con la clase "Slider-img" y establece su
+posición en estática. */
+.Slider-img:nth-child(1){
+  position: static;
+}
+/* El código anterior define una clase CSS llamada "Slider-btn". Esta clase se usa para diseñar un
+elemento de botón que se usa en un componente deslizante. */
+.Slider-btn{
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
+  border-radius: 50%;
+  background-color:white;
+  position: absolute;
+  top:calc( 50% - 1.5rem );
+  cursor: pointer;
+  transition: transform .5s ease;
+}
+/* El código anterior define una regla CSS para la clase "Slider-btn" cuando se desplaza sobre ella.
+Aplica una propiedad de transformación para escalar el elemento al 90% de su tamaño original. */
+.Slider-btn:hover{
+  transform: scale(.9);
+}
+/* El código anterior define una regla CSS para la clase ".Slider-btn" cuando está en estado activo.
+Cuando se presiona el botón, se aplicará una propiedad de transformación para escalar el botón 1,1
+veces su tamaño original. */
+.Slider-btn:active{
+  transform: scale(1.1);
+}
+/* El código anterior define una clase CSS llamada "siguiente" y establece la propiedad "derecha" en el
+5% del ancho del elemento principal. */
+.next{
+  right: 5%;
+}
+/* El código anterior define una clase CSS llamada ".prev" y establece la propiedad "izquierda" en 5%.
+Esta clase se puede aplicar a un elemento HTML para colocarlo a un 5 % del lado izquierdo del
+elemento que lo contiene. */
+.prev{
+  left: 5%;
+}
+.Slider-svg{}
+/* El código anterior define una clase CSS llamada "Slider-ul". Esta clase se utiliza para aplicar
+estilo a un elemento deslizante. */
+.Slider-ul{
+  width: 100%;
+  min-height: 5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.Slider-li{}
+/* El código anterior define una clase CSS llamada "Slider-punto". Esta clase se utiliza para aplicar
+estilo a un punto o punto deslizante. Establece el ancho y la altura del punto en 2 rem, le da un
+color de fondo blanco y aplica un radio de borde del 50 % para hacerlo circular. La propiedad del
+cursor se establece en "puntero" para indicar que se puede hacer clic en él. */
+.Slider-punto{
+  width: 2rem;
+  height: 2rem;
+  background-color:white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* El código anterior define una clase CSS llamada "Slider-punto.isActive" y establece su color de
+fondo en negro. */
+.Slider-punto.isActive{
+  background-color:black;
+}
+/* El código anterior está definiendo una clase CSS llamada "titulo-rutas". Esta clase se utiliza para
+diseñar un elemento de título. El código usa propiedades de flexbox para centrar el título
+horizontal y verticalmente dentro de su contenedor. También establece el tamaño de fuente en 3 rem,
+el color en trigo y agrega un relleno de 2 rem en la parte superior del título. */
+.titulo-rutas{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; 
+  font-size: 3rem;
+  color: wheat;
+  padding-top: 2rem;
+}
+/* El código anterior es una consulta de medios CSS que apunta a pantallas con un ancho máximo de 1040
+píxeles. Aplica un estilo a los elementos con la clase "titulo-rutas" aumentando el tamaño de fuente
+a 2rem cuando el ancho de pantalla está dentro del rango especificado. */
+@media(max-width:1040px){
+  .titulo-rutas{
+    font-size: 2rem;
+  }
+}
+/* El código anterior es una consulta de medios CSS que apunta a pantallas con un ancho máximo de 691
+píxeles. Aplica un estilo a los elementos con la clase "titulo-rutas" añadiendo un relleno izquierdo
+de 3rem. Este estilo solo se aplicará cuando el ancho de la pantalla sea menor o igual a 691
+píxeles. */
+@media(max-width:691px){
+  .titulo-rutas{
+   padding-left: 3rem;
+  }
+}
+
+/* El código anterior define una clase CSS llamada "rutas". Establece el ancho de los elementos con
+esta clase al 100% y alinea el texto dentro de ellos al centro. La propiedad de color de fondo está
+comentada, por lo que actualmente no se aplica. */
+.rutas{
+/* background-color: aquamarine; */
+  width: 100%;
+  text-align: center;
+}
+/* El código anterior está definiendo una clase CSS llamada "nombre-ruta". Esta clase se utiliza para
+diseñar un elemento en una página web. */
+.nombre-ruta{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; 
+  font-size: 1.5rem;
+  color: wheat;
+  padding-top: 2rem;
+  padding-left: 4rem;
+}
+/* El código anterior es una consulta de medios CSS que apunta a pantallas con un ancho máximo de 916
+píxeles. Aplica una regla de estilo a los elementos con la clase "nombre-ruta", estableciendo el
+relleno izquierdo en 0. Esto probablemente se usa para ajustar el diseño o la apariencia de los
+elementos cuando se ven en pantallas más pequeñas. */
+@media(max-width:916px){
+  .nombre-ruta{
+    padding-left: 0;
+  }
+}
+/* El código anterior define una clase CSS llamada ".ruta-p". Esta clase se utiliza para diseñar un
+elemento de párrafo. */
+.ruta-p{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+}
+/* El código anterior define una clase CSS llamada "iframe". Establece el ancho del elemento al 100 %
+de su contenedor principal, la altura a 33,5 rem y aplica propiedades de ajuste flexible y contenido
+alineado para centrar el contenido dentro del elemento. También establece valores de relleno para
+los lados superior, derecho, inferior e izquierdo del elemento. */
+.iframe{
+    width: 100%;
+    height: 33.5rem;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-top: 0%;
+    padding-right: 10%;
+    padding-bottom: 0em;
+    padding-left: 10%;
+}
+/* El código anterior define una clase CSS llamada "iframe-a" y establece la propiedad de color en
+trigo. Esta clase se puede aplicar a elementos HTML para cambiar su color de texto a trigo. */
+.iframe-a{
+  color: wheat;
+}
+/* El código anterior define una clase CSS llamada ".span-rutas". Esta clase se está utilizando para
+diseñar un elemento contenedor que contiene varios elementos con la clase "span-rutas". El elemento
+contenedor tendrá un diseño de caja flexible con sus elementos secundarios dispuestos en una sola
+fila, con el contenido centrado tanto horizontal como verticalmente. El tamaño de fuente se
+establecerá en 1 rem y el color del texto será trigo. */
+.span-rutas{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: wheat;
+}
+/* El código anterior define una clase CSS llamada ".rutas-a". Esta clase se usa para diseñar un grupo
+de elementos en un contenedor flexible. Los elementos se mostrarán en una fila, con su contenido
+centrado tanto horizontal como verticalmente. El color del texto se establece en trigo y el cursor
+cambiará a un puntero al pasar el mouse sobre los elementos. El padding-top se establece en 1 rem,
+el tamaño de fuente se establece en 2 rem y el texto se subrayará. */
+.rutas-a{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color:wheat;
+  cursor: pointer;
+  padding-top: 1rem;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+/* El código anterior está definiendo una clase CSS llamada "Main-highlights". Establece el ancho del
+elemento en el 90 % de su contenedor principal, establece la propiedad de visualización en línea,
+establece el color del texto en blanco y establece los márgenes izquierdo y derecho en 12,5 rem. El
+color de fondo está comentado, por lo que no se aplicará. */
+.Main-hightlights{
+  width:90%;
+  /*background-color: brown;*/
+  display:inline;
+  color: white;
+  margin: 0 12.5rem;
+}
+/* El código anterior define una clase CSS llamada "Hightlights-wrapper". Establece el ancho del
+elemento en el 95 % de su contenedor principal, con un ancho máximo de 76 rem. El color de fondo
+está comentado, por lo que actualmente no se está aplicando. El elemento también se centra
+horizontalmente usando la propiedad "margin: auto". */
+.Hightlights-wrapper{
+  width: 95%;
+  max-width:76rem;
+  /*background-color: yellowgreen;*/
+  margin: auto;
+}
+/* El código anterior define una clase CSS llamada "Hightlights-h1". Esta clase se utiliza para diseñar
+un elemento de encabezado (h1). */
+.Hightlights-h1{
+  font-size:5vh;
+  text-transform: uppercase;
+  line-height: 4.376rem;
+  border-bottom: rgb(249, 121, 2) solid .1563rem;
+  margin: 0 0 4.375rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  animation:Hightlights-h1 0.8s linear both
+}
+/* El código anterior define una animación CSS llamada "Hightlights-h1". Esta animación cambia
+gradualmente el espaciado entre letras y la opacidad de un elemento a lo largo del tiempo. Al
+comienzo de la animación (0 %), el espaciado entre letras se establece en 0,6 em y la opacidad se
+establece en 0. A medida que avanza la animación (40 %), la opacidad aumenta a 0,6. Finalmente, al
+final de la animación (100%), el espacio entre letras se establece en normal y la opacidad se
+establece en 1. */
+@keyframes Hightlights-h1{
+  0%{letter-spacing:.6em;opacity:0}
+  40%{opacity:.6}
+  100%{letter-spacing:normal;opacity:1}  
+}
+/* El código anterior está definiendo una clase CSS llamada "Hightlights-contenedora". Esta clase se
+utiliza para diseñar un elemento contenedor. */
+.Hightlights-contenedora{
+  flex-basis: calc(100% / 2 );
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items:center;
+  gap: 1.25rem;
+} 
+/* El código anterior es una consulta de medios CSS que apunta a pantallas con un ancho máximo de 991
+píxeles. Aplica una regla CSS a la clase ".Hightlights-contenedora", cambiando su propiedad
+flex-direction a "column". Esto significa que cuando el ancho de la pantalla sea menor o igual a 991
+píxeles, los elementos con la clase ".Hightlights-contenedora" se mostrarán en un diseño de columna
+en lugar del diseño de fila predeterminado. */
+@media (max-width:991px){
+  .Hightlights-contenedora{
+      flex-direction: column;
+  }
+}
+/* El código anterior define una clase CSS llamada "Hightlights-secion" y establece la propiedad
+margin-top en 3.75rem. Esta clase se puede aplicar a elementos HTML para agregar un margen en la
+parte superior del elemento. */
+.Hightlights-secion{
+  margin-top: 3.75rem;
+}
+/* El código anterior define una clase CSS llamada &quot;Hightlights-h3&quot;. Esta clase se utiliza
+para diseñar un elemento HTML con el<h3> etiqueta. Las propiedades CSS que se aplican a esta clase
+son: - display: flex; - Esto configura el elemento para usar un diseño de caja flexible. - flujo
+flexible: fila nowrap; - Esto establece que la dirección de flexión sea una fila y evita que los
+elementos se ajusten a una nueva línea. - justificar-contenido: centro; - Esto centra el contenido
+horizontalmente dentro del contenedor flexible. - alinear elementos: centro; - Esto centra el
+contenido verticalmente dentro del */
+.Hightlights-h3{
+  display: flex;
+ flex-flow: row nowrap;
+ justify-content: center;
+ align-items: center;
+ font-size: 2rem;
+}
+/* El código anterior define una clase CSS llamada "Hightlights-img". Establece el ancho y alto del
+elemento al 100% de su contenedor principal. También establece la propiedad de visualización en
+"bloque" y "flex", lo que significa que el elemento se mostrará como un elemento a nivel de bloque y
+utilizará el diseño de caja flexible. La propiedad de color de fondo está comentada, por lo que
+actualmente no se aplica. */
+.Hightlights-img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  /*background-color: cadetblue;*/
+  display: flex;
+} 
+/* El código anterior define una clase CSS llamada ".h1-formulario". Esta clase se utiliza para diseñar
+un elemento de encabezado en un formulario. El código usa flexbox para centrar el encabezado tanto
+vertical como horizontalmente dentro de su contenedor. También está aplicando la transformación de
+texto a mayúsculas, configurando el tamaño de fuente en 2 rem y el color en trigo. Además, está
+agregando relleno en la parte superior del encabezado para crear algo de espacio. */
+.h1-formulario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: wheat;
+  padding-top: 4rem;
+}
+/* El código anterior define una clase CSS llamada ".p-formulario". Esta clase se utiliza para diseñar
+un elemento de formulario. */
+.p-formulario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: wheat;
+  padding-top: 1.3rem;
+}
+
+/* El código anterior define una clase CSS llamada "encabezado". Esta clase se utiliza para diseñar un
+elemento de encabezado en un documento HTML. */
+.header{
+  color:wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding-top: 1.25rem;
+  text-transform: uppercase;
+}
+/* El código anterior define una clase CSS llamada "formulario". Establece el ancho del elemento en
+45vh (altura de la ventana gráfica), agrega relleno y margen, establece el color de fondo en un gris
+oscuro semitransparente, alinea el texto al centro y centra el elemento horizontalmente usando
+márgenes automáticos. */
+.formulario {
+  width: 45vh;
+  padding: 1rem;
+  margin: 2rem;
+  background-color: rgb(51, 51, 51, 0.602);
+  text-align: center;
+  margin:auto;
+}
+/* El código anterior está definiendo una clase CSS llamada ".rutas-label". Esta clase se utiliza para
+diseñar un elemento de etiqueta. El color del texto de la etiqueta se establece en blanco, hay
+relleno en el lado derecho de la etiqueta y el tamaño de fuente se establece en 1 rem. */
+.rutas-label{
+  color: white;
+  padding-right: 2rem;
+  font-size: 1rem;
+}
+/* El código anterior define una clase CSS llamada "opciones". Esta clase se aplica a un elemento y
+establece varios estilos para ese elemento. */
+.opciones{
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: orange thin solid;
+  text-align: center;
+  outline: none;
+  padding-left: 2rem;
+  font-size: .9rem;
+}
+/* El código anterior define una clase CSS llamada "mb-3". Esta clase se aplica a un elemento HTML y
+establece varios estilos para ese elemento. */
+.mb-3{
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: orange thin solid;
+  text-align: center;
+  outline: none;
+  padding: .2rem 0;
+  font-size: .9rem;
+  color: white;
+}
+/* El código anterior define los estilos CSS para un elemento de botón. */
+.button {
+  width: 50%;
+  margin-left: 6.8rem;
+  position: relative;
+  padding: 8px 12px;
+  font-size: 18px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+/* El código anterior define un pseudoelemento CSS (::before) para un elemento de botón. Este
+pseudo-elemento está posicionado absolutamente y tiene un ancho y alto de 7.9rem. Tiene un radio de
+borde que coincide con el radio de borde del elemento del botón. El pseudoelemento se escala
+inicialmente a 0 y tiene un índice z de -1, lo que significa que se colocará detrás del elemento del
+botón. Tiene un color de fondo de rgb (193, 163, 98) y una propiedad de transición que especifica
+una duración de 0,6 s y una función de temporización cúbica-bezier. este codigo es */
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 7.9rem;
+  height: 7.9rem;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(193, 163, 98);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* El código anterior define una regla CSS para un elemento de botón cuando se desplaza sobre él. Está
+apuntando al pseudo-elemento ::antes del botón y aplicando una transformación de escala con un valor
+de 3. Esto hará que el pseudo-elemento parezca más grande cuando se pase el cursor sobre el botón. */
+.button:hover::before {
+  scale: 3;
+}
+
+/* El código anterior define una regla CSS para un elemento de botón cuando el usuario pasa el cursor
+sobre él. Establece el color del texto del botón en #212121, escala el botón por un factor de 1,1 y
+agrega un efecto de sombra de cuadro con un radio de desenfoque de 20 px y un color de rgba (193,
+163, 98,0.4). */
+.button:hover {
+  color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+/* El código anterior define una regla CSS para la clase "botón" cuando está en estado activo.
+Establece la propiedad de escala en 1, lo que significa que el botón tendrá su tamaño original
+cuando se haga clic o se presione. */
+.button:active {
+  scale: 1;
+}
+
+/* El código anterior define una clase CSS llamada "entrada" y aplica un margen izquierdo de 3.5 rem a
+los elementos con esa clase. */
+.input{
+  margin-left: 3.5rem;
+}
+/* El código anterior define una clase CSS llamada "botón de entrada". Establece la alineación del
+texto en el centro y agrega relleno al lado izquierdo del elemento. */
+.input-button{
+  text-align: center;
+  padding-left: 3rem;
+}
+/* El código anterior define una clase CSS llamada "control de formulario" y establece la propiedad
+margin-left en 45 píxeles. Esta clase se puede aplicar a elementos HTML para aplicar el estilo
+especificado. */
+.form-control{
+  margin-left: 45px;
+}
+.option-option{
+  color: black;
+}
+/*FOOTER*/
+.Footer-wrapper{
+  /*background-color: aqua;*/
+}
+/*.Rrss-ul.
+Está configurando la propiedad de visualización para que sea flexible, con un flujo de fila y sin ajuste.
+También centra los elementos horizontal y verticalmente con `justify-content: center` y `align-items: center`. 
+Está agregando una separacion de 1.25rem entre los elementos con `gap: 1.25rem`. 
+Está estableciendo un margen de 2,5 rem en la parte superior e inferior de la lista. 
+Finalmente, está agregando un efecto de transición a la propiedad transform con una duración de 0.2 segundos. */
+.Rrss-ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 2.5rem 0 2.5rem;
+  transition: transform .2s ease;
+}
+/* Este código CSS está diseñando los íconos de las redes sociales en la sección de pie de página de la
+página web. Cuando el usuario pasa el cursor sobre el ícono, aumentará su tamaño en un factor de 1.8
+y cambiará su color a un tono específico de naranja. La clase `Rrss-icon` establece el ancho del
+icono en 2em, su color en blanco y agrega un efecto de transición a la propiedad de transformación
+con una duración de 0,2 segundos. */
+.Rrss-icon:hover{
+  transform: scale(1.5);
+  color: wheat;
+}    
+.Rrss-icon{
+  width: 2em;
+  color: white;
+  transition: transform .2s ease;
+}
+.Rrss-li{}
+/*FIN FOOTER*/
+/*MODIFICACION DEL SCROL*/
+/* width */
+::-webkit-scrollbar {
+  width: .625rem;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background:rgb(78, 77, 77);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:wheat;
+  border-radius: .625rem;
+}
+/*FIN DE LA MODIFICACION DE SCROLL*/  

@@ -1,0 +1,226 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* El código CSS `body { ... }` está diseñando el elemento `body` de un documento HTML. */
+body { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin:20px 0; 
+    text-align:center; 
+    background:beige; 
+    overflow:hidden; 
+    background-image: url(../images/32128.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+/* El código CSS `h1 { font-size:5em; selección de usuario: ninguno; }` está diseñando el elemento
+`h1`. */
+h1 {
+ font-size:5em;
+ user-select:none;
+}
+
+/* El código CSS `h1 span { display:inline-block; animación: flotar .2s facilidad de entrada y salida
+infinita; }` apunta a los elementos `span` que son descendientes del elemento `h1`. Establece la
+propiedad de visualización de esos elementos `span` en `inline-block`, lo que les permite mostrarse
+en línea con el texto pero también tener un ancho y un alto. */
+h1 span { display:inline-block; animation:float .2s ease-in-out infinite; }
+ @keyframes float {
+  0%,100%{ transform:none; }
+  33%{ transform:translateY(-1px) rotate(-2deg); }
+  66%{ transform:translateY(1px) rotate(2deg); }
+}
+/* El código CSS `body:hover span { animation:bounce .6s; }` está aplicando una animación llamada
+"rebote" a los elementos `span` que son descendientes del elemento `body` cuando se pasa el cursor
+sobre el elemento `body`. */
+body:hover span { animation:bounce .6s; }
+@keyframes bounce {
+  0%,100%{ transform:translate(0); }
+  25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
+  50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
+}
+
+/* El código CSS `span:nth-child(4n) { color:hsl(50, 75%, 55%); sombra de texto:1px 1px hsl(50, 75%,
+45%), 2px 2px hsl(50, 45%, 45%), 3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75 %, 45%); }` tiene
+como objetivo cada cuarto elemento `span` y aplica los siguientes estilos: */
+span:nth-child(4n) { color:hsl(50, 75%, 55%); text-shadow:1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%), 3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%); }
+/* El código CSS `span:nth-child(4n-1) { color:hsl(135, 35%, 55%); text-shadow:1px 1px hsl(135, 35 %,
+45 %), 2px 2px hsl(135, 35 %, 45 %), 3px 3px hsl(135, 35 %, 45 %),` apunta a cada elemento `span `
+que es el cuarto hijo menos 1 de su elemento padre. Aplica los siguientes estilos a esos elementos: */
+span:nth-child(4n-1) { color:hsl(135, 35%, 55%); text-shadow:1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%), 3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%); }
+/* El código CSS `span:nth-child(4n-2) { color:hsl(155, 35%, 60%); sombra de texto: 1px 1px hsl (155,
+25%, 50%), 2px 2px hsl (155, 25%, 50%), 3px 3px hsl (155, 25%, 50%), 4px 4px hsl (140, 25 %, 50%);
+}` apunta a cada elemento `span` que es el cuarto hijo menos 2 de su elemento padre. Aplica los
+siguientes estilos a esos elementos: */
+span:nth-child(4n-2) { color:hsl(155, 35%, 60%); text-shadow:1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%), 3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%); }
+/* El código CSS `span:nth-child(4n-3) { color:hsl(30, 65%, 60%); sombra de texto:1px 1px hsl(30, 45%,
+50%), 2px 2px hsl(30, 45%, 50%), 3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45 %, 50%); }` tiene
+como objetivo cada elemento `span` que sea el cuarto elemento secundario menos 3 de su elemento
+principal. Aplica los siguientes estilos a esos elementos: */
+span:nth-child(4n-3) { color:hsl(30, 65%, 60%); text-shadow:1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%), 3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%); }
+
+
+/* El código CSS `h1 span:nth-child(2){ animation-delay:.05s; } h1 span:nth-child(3){
+animation-delay:.1s; } h1 span:nth-child(4){ animation-delay:.15s; } h1 span:nth-child(5){
+animation-delay:.2s; } h1 span:nth-child(6){ animation-delay:.25s; } h1 span:nth-child(7){
+animation-delay:.3s; } h1 span:nth-child(8){ animation-delay:.35s; } h1 span:nth-child(9){
+animation-delay:.4s; } h1 span:nth-child(10){ animation-delay:.45s; } h1 span:nth-child(11){
+animation-delay:.5s; } h1 span:nth-child(12){ animation-delay:.55s; } h1 span:nth-child(13){
+animation-delay:.6s; } h1 span:nth-child(14){ animation-delay:.65s; } h1 span:nth-child(15){
+animation-delay:.7s; } h1 span:nth-child(16){ animation-delay:.75s;}` está aplicando retrasos de
+animación a cada elemento `span` individual */
+h1 span:nth-child(2){ animation-delay:.05s; }
+h1 span:nth-child(3){ animation-delay:.1s; }
+h1 span:nth-child(4){ animation-delay:.15s; }
+h1 span:nth-child(5){ animation-delay:.2s; }
+h1 span:nth-child(6){ animation-delay:.25s; }
+h1 span:nth-child(7){ animation-delay:.3s; }
+h1 span:nth-child(8){ animation-delay:.35s; }
+h1 span:nth-child(9){ animation-delay:.4s; }
+h1 span:nth-child(10){ animation-delay:.45s; }
+h1 span:nth-child(11){ animation-delay:.5s; }
+h1 span:nth-child(12){ animation-delay:.55s; }
+h1 span:nth-child(13){ animation-delay:.6s; }
+h1 span:nth-child(14){ animation-delay:.65s; }
+h1 span:nth-child(15){ animation-delay:.7s; }
+h1 span:nth-child(16){ animation-delay:.75s;}
+/* El código CSS `.Registro-h3` apunta a un elemento con el nombre de clase "Registro-h3". Está
+aplicando los siguientes estilos a ese elemento: */
+.Registro-h3{
+    width: 60%;
+    color: wheat;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 2.2vh;
+    text-transform: uppercase;
+    padding-top: 2rem;
+}
+
+/* El código CSS `.Registro-p` apunta a un elemento con el nombre de clase "Registro-p". Está aplicando
+los siguientes estilos a ese elemento: */
+.Registro-p{
+    width: 60%;
+    color: wheat;
+    padding-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 2vh;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+/* El código CSS `.Registro-a` apunta a un elemento con el nombre de clase "Registro-a". Está aplicando
+los siguientes estilos a ese elemento: */
+.Registro-a{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    color:wheat;
+    cursor: pointer;
+    padding-top: 1rem;
+    font-size: 2rem;
+    text-decoration: underline;
+    transition: transform .2s ease;
+}
+/* El código CSS `.Registro-a:hover{ transform: scale(1.3); }` está aplicando una transformación al
+elemento con la clase "Registro-a" cuando el cursor lo pasa por encima. La propiedad `transform:
+scale(1.3);` escala el elemento a 1,3 veces su tamaño original. Esto crea un efecto de que el
+elemento parece más grande cuando se pasa el cursor sobre él. */
+.Registro-a:hover{
+  transform: scale(1.3);
+}
+/* El código CSS `.Registro-a:hover::after{ transform: scaleX(1); }` tiene como objetivo el
+pseudoelemento `::after` del elemento con la clase "Registro-a" cuando se desplaza sobre él. */
+.Registro-a:hover::after{
+  transform: scaleX(1);
+}
+/* El código CSS `.Registro-a:active{ transform: scale(1.3); }` apunta al elemento con la clase
+"Registro-a" cuando está en estado activo. Cuando se hace clic o se presiona el elemento, se
+escalará a 1,3 veces su tamaño original. Esto crea un efecto de que el elemento parece más grande
+cuando se interactúa con él. */
+.Registro-a:active{
+  transform: scale(1.3);
+}

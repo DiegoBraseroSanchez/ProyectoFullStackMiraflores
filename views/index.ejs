@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheet/style.css" type="text/css"/>
+  <title>Inicio</title>
+</head>
+<body>
+
+ <!-- el `<div class="container"> ` está creando un elemento contenedor que se usa para agrupar y contener otros elementos dentro de él. 
+  Se usa comúnmente en marcos CSS para crear un diseño receptivo. 
+  En este código específico, se utiliza para contener el contenido de la página web. -->
+  <div class="container">
+    <div class="columna">
+      <% if(session.user_id){ %>
+        <!-- <html>El código que proporcionó está creando un conjunto de etiquetas de anclaje (` <a>`) con diferentes atributos href y un atributo de clase común. 
+          Estas etiquetas de anclaje se utilizan para crear enlaces/botones en la página web.</a> -->
+        <a href="/inicio" class="direcionar">pagina principal</a>
+        <a href="/admi" class="direcionar">Tabla de datos</a>
+        <a href="/update" class="direcionar">Actualizar datos</a>
+        <a href="/delete" class="direcionar">Borrar usuario</a>
+        <a href="/logout" class="direcionar">Cerrar Sesión</a>
+      <% }else{ %>
+        <div class="card">
+          <div class="header">Login</div>
+          <div class="formulario">
+            <form action="/login" method="POST">
+             <!-- El código que proporcionó está creando un campo de entrada de formulario para la dirección de correo electrónico del usuario. -->
+              <div class="mb-3">
+                <label for="user_email_address">Email</label>
+                <input type="email" name="user_email_address" id="" class="form-control">
+              </div>
+             <!-- El código que proporcionó está creando un campo de entrada de formulario para la contraseña del usuario. -->
+              <div class="mb-3">
+                <label for="user_password">Contraseña</label>
+                <input type="password" name="user_password" id="" class="form-control">
+              </div>
+             <!-- El código `<div class="button"> ` está creando un `<div> ` elemento con la clase &quot;botón&quot;. este <div> 
+             se utiliza para agrupar y diseñar el botón de inicio de sesión. -->
+              <div class="button">
+                <input type="submit" value="Login" class="input">
+              </div>
+            </form>
+           <!-- El código que proporcionó está creando un elemento de formulario con una clase de "botón". Este formulario se utiliza para el registro de usuarios. 
+            Cuando el usuario hace clic en el botón "Registrarse", el formulario enviará una solicitud GET al punto final "/registrar". 
+            El formulario contiene un elemento de entrada de tipo "enviar" con un valor de "Registrarse" y una clase de "entrada". 
+            Este elemento de entrada representa el botón en el que el usuario hará clic para enviar el formulario de registro. -->
+            <form class="button" action="/register" method="GET">
+              <input type="submit" value="Register" class="input">
+            </form>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

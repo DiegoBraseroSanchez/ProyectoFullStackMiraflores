@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheet/delete.css" type="text/css"/>
+  <title>Delete</title>
+</head>
+<body>
+  <!-- el `<div class="container"> ` está creando un elemento contenedor que se usa para envolver y contener el contenido dentro de él. 
+    e usa comúnmente en marcos CSS como Bootstrap para proporcionar un diseño receptivo y espacio para el contenido que contiene. -->
+    <div class="container">
+        <!-- el `<h1 class="titulo"> Miraflores</h1> ` está creando un elemento de encabezado con el texto &quot;Miraflores&quot;. La clase &quot;titulo&quot; 
+            se aplica al elemento de encabezado, que se puede utilizar con fines de estilo. -->
+        <h1 class="titulo">Miraflores</h1>
+        <div class="row mt-5">
+            <div class="card">
+                <div class="header">Actualiza tus datos</div>
+    <!-- El código que proporcionó está creando un formulario con una clase de "formulario". 
+    Dentro del formulario, hay un campo de entrada para la dirección de correo electrónico del usuario. 
+    La etiqueta "Correo electrónico" se asocia con este campo de entrada utilizando el atributo "para". 
+    El campo de entrada tiene un tipo de "correo electrónico" y un nombre de "user_email_address". La clase "control de formulario" se aplica al campo de entrada, que normalmente se usa con fines de estilo. -->
+                <div class="formulario">
+                    <form action="/borrarUser" method="POST">
+                        <div class="mb-3">
+                            <label for="user_email_address">Email</label>
+                            <input type="email" name="user_email_address" id="" class="form-control">
+                        </div>
+                        <!-- El código que proporcionó está creando un campo de entrada de contraseña dentro de un formulario. -->
+                        <div class="mb-3">
+                            <label for="user_password">Contraseña</label>
+                            <input type="password" name="user_password" id="" class="form-control">
+                        </div>
+                        <!-- El código `<div class="button"><input type="submit" value="BorrarUsuario" class="input"></div> ` está creando un elemento de botón dentro de un contenedor div. 
+                        El botón es de tipo &quot;enviar&quot; y tiene un valor de &quot;BorrarUsuario&quot;. 
+                        La clase &quot;entrada&quot; se aplica al botón, que se puede utilizar con fines de estilo. -->
+                        <div class="button">
+                            <input type="submit" value="BorrarUsuario" class="input">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

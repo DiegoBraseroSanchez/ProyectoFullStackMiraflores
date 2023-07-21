@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- el `<link rel="stylesheet" href="/stylesheet/update.css" type="text/css"/> ` la línea vincula un archivo CSS externo al documento HTML. 
+    Especifica la ubicación del archivo CSS (`/stylesheet/update.css`) y el tipo de archivo (`text/css`). 
+    Esto permite que el documento HTML aplique los estilos definidos en el archivo CSS a sus elementos. -->
+    <link rel="stylesheet" href="/stylesheet/update.css" type="text/css"/>
+    <title>update</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1">Miraflores</h1>
+        <div class="row mt-5">
+            <div class="card">
+                <div class="header">Actualiza tus datos</div>
+                <div class="formulario">
+                    <form action="/actualizarDatos" method="POST">
+                        <!-- El código que proporcionó está creando un campo de formulario para que el usuario ingrese su dirección de correo electrónico. -->
+                        <div class="mb-3">
+                            <label for="user_email_address">Email</label>
+                            <input type="email" name="user_email_address" id="" class="form-control">
+                        </div>
+                       <!-- El código que proporcionó está creando un campo de entrada de formulario para que el usuario ingrese su contraseña. el `<div class="mb-3">  
+                        La ` <label for="user_password">Contraseña</label> ` es una etiqueta para el campo de ingreso de contraseña, indicando que es para la &quot;Contraseña&quot; (contraseña). el `<input type="password" name="user_password" id="" class="form-control"> ` es el campo de entrada de contraseña real, donde el usuario puede ingresar su contraseña. -->
+                        <div class="mb-3">
+                            <label for="user_password">Contraseña</label>
+                            <input type="password" name="user_password" id="" class="form-control">
+                        </div>
+                        <!-- El código que proporcionó está creando un campo de entrada de formulario para que el usuario ingrese una nueva contraseña. -->
+                        <div class="mb-3">
+                            <label for="user_password">Nueva contraseña</label>
+                            <input type="password" name="user_password_new" id="" class="form-control">
+                        </div>
+                      <!-- El código que proporcionó está creando un elemento de botón con la clase "botón". Dentro del elemento botón, hay un elemento de entrada con el tipo "enviar" y el valor "Actualizar Datos". Este botón se utiliza para enviar el formulario cuando se hace clic. -->
+                        <div class="button">
+                            <input type="submit" value="Actualizar Datos" class="input">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
